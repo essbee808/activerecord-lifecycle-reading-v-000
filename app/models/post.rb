@@ -6,9 +6,8 @@ class Post < ActiveRecord::Base
   before_validation :make_title_case
   # use before_validation when modifying an attribute of the model
   # any other action => use before_save
-
   before_save :email_author_about_post
-  
+
   private
 
   def is_title_case
