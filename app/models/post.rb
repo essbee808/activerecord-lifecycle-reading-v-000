@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
 
   before_validation :make_title_case
   # use before_validation when modifying an attribute of the model
-  # any other action => use before_save
+  # before_save => any other action
   # before_create => similar to before_save, however, only gets called when the model is created for the FIRST TIME
   before_save :email_author_about_post
 
